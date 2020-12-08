@@ -12,7 +12,8 @@ if (process.env.NODE_ENV === 'dev') {
 
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
-    urlDB = 'mongodb+srv://atlasdatabase01:mongo2021.-@cluster0.bemxx.mongodb.net/test';
+    // urlDB = 'mongodb+srv://atlasdatabase01:mongo2021.-@cluster0.bemxx.mongodb.net/cafe';
+    urlDB = process.env.MONGO_URI;
 }
 
 process.env.URLDB = urlDB;
